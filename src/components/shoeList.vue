@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<header>最新推荐</header>
-		<main v-for="item in list">
+		<main v-for="item in listt.list">
 			<div class="left">
 				<img :src="item.pic">
 			</div>
@@ -22,7 +22,7 @@
 	import {mapState} from 'vuex'
 	export default {
 		computed:{
-			...mapState(["list"])
+			...mapState(["listt","list"])
 		}
 	}
 </script>

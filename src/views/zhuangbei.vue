@@ -18,7 +18,7 @@
 				<p>当季新款</p>
 			</div>
 		</nav>
-		<article v-for="item in Modular">
+		<article v-for="item in Modular.Modular">
 			<div :style="{background:'url('+item.bgimg+')'}">
 				<p class="one">{{item.name}}{{item.ename}}</p>
 				<p class="two">{{item.bannerSpan}}</p>
@@ -44,7 +44,8 @@
 			
 		},
 		computed:{
-			...mapState(["Modular"])
+			...mapState(["Modular","Modular"]),
+			
 			
 		}
 	}
