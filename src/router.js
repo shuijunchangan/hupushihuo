@@ -6,7 +6,9 @@ import youhui from './views/youhui.vue'
 import faxian from './views/faxian.vue'
 import zhuangbei from './views/zhuangbei.vue'
 import gengduo from './views/gengduo.vue'
-
+import rexiao from './views/zhuangbei/rexiao.vue'
+import rexiaolist from './components/rexiaolist.vue'
+import rexiaolist2 from './components/rexiaolist2.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -32,7 +34,7 @@ export default new Router({
 		{
 		  path: '/zhuangbei',
 		  name: 'zhuangbei',
-		  component: zhuangbei
+		  component: zhuangbei,
 		},
 		{
 		  path: '/gengduo',
@@ -40,5 +42,24 @@ export default new Router({
 		  component: gengduo
 		},
     
+		{
+		  path: '/rexiao',
+		  name: 'rexiao',
+		  component: rexiao,
+			redirect:{"name":"rexiaolist"},
+			children:[
+				{
+					path:'/rexiao/rexiaolist',
+					name:"rexiaolist",
+					component:rexiaolist,
+					
+				},
+				{
+					path:'/rexiao/:type',
+					name:"rexiaolist2",
+					component:rexiaolist2
+				}
+			]
+		},
   ]
 })

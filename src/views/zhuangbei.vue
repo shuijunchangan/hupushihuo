@@ -7,14 +7,14 @@
 		<nav>
 			<div>
 				<p><span class="iconfont">&#xe617;</span></p>
-				<p>热销排行</p>
+				<p @click="$router.push('/rexiao')">热销排行</p>
 			</div>
 			<div class="bor">
-				<p><span class="iconfont">&#xe616;</span></p>
+				<p @click="$router.push('/rexiao')"><span class="iconfont">&#xe616;</span></p>
 				<p>好价精选</p>
 			</div>
 			<div>
-				<p><span class="iconfont">&#xe6bb;</span></p>
+				<p @click="$router.push('/rexiao')"><span class="iconfont">&#xe6bb;</span></p>
 				<p>当季新款</p>
 			</div>
 		</nav>
